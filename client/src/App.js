@@ -1,38 +1,22 @@
-import "./App.css";
+import React from "react";
+import AddPane from "./AddPane";
 import Navigation from "./Navigation";
+import SearchPane from "./SearchPane";
+import "./App.css";
 
 function App() {
+  const [activePane, setActivePane] = React.useState("search");
+
+  const handleClick = (name) => {
+    setActivePane(name);
+  };
+
   return (
     <>
       <h1 className="title">Ma bibliothèque</h1>
-      <Navigation />
+      <Navigation activePane={activePane} onClick={handleClick} />
       <div className="content">
-        <form className="searchForm">
-          <input type="text" />
-          <button>Rechercher</button>
-        </form>
-        <table className="searchResults">
-          <thead>
-            <tr>
-              <th>Auteur</th>
-              <th>Titre</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>J.R.R. Tolkien</td>
-              <td>La Communauté de l'Anneau</td>
-            </tr>
-            <tr>
-              <td>J.R.R. Tolkien</td>
-              <td>Les Deux Tours</td>
-            </tr>
-            <tr>
-              <td>J.R.R. Tolkien</td>
-              <td>Le Retour du Roi</td>
-            </tr>
-          </tbody>
-        </table>
+        {activePane === "search" ? <SearchPane /> : <AddPane />}
       </div>
     </>
   );

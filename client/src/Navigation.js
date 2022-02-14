@@ -1,25 +1,18 @@
-import React from "react";
 import "./Navigation.css";
 
-const Navigation = () => {
-  const [activePane, setActivePane] = React.useState("search");
-
-  const handleClick = (name) => {
-    setActivePane(name);
-  };
-
+const Navigation = ({ activePane, onClick }) => {
   return (
     <div className="navigation">
       <div>
         <NavigationButton
           active={activePane === "search"}
           name="Rechercher un livre"
-          onClick={() => handleClick("search")}
+          onClick={() => onClick("search")}
         />
         <NavigationButton
           active={activePane === "add"}
           name="Encoder un livre"
-          onClick={() => handleClick("add")}
+          onClick={() => onClick("add")}
         />
       </div>
     </div>
