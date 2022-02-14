@@ -1,0 +1,33 @@
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.addForm > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.addForm label {
+  width: 80px;
+}
+
+.addForm input {
+  flex-grow: 1;
+}
+
+.addForm button {
+  background-color: inherit;
+  border: 1px solid #309995;
+  padding: 5px;
+  color: #309995;
+  border-radius: 0.5em;
+}
+
+.addForm button:hover {
+  background-color: #309995;
+  color: white;
+}
