@@ -1,0 +1,34 @@
+.navigation {
+  background-color: #309995;
+  padding: 20px;
+}
+
+.navigation > div {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.navigation button {
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1px;
+}
+
+.navigation button:hover {
+  border-width: 2px;
+  margin: 0;
+}
+
+.navigation button.active {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  margin: 1px;
+}
