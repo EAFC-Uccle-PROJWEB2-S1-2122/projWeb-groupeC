@@ -55,24 +55,28 @@ const SearchPane = () => {
         <input type="text" />
         <button>Rechercher</button>
       </form>
-      <table className="searchResults">
-        <thead>
-          <tr>
-            <th>Auteur</th>
-            <th>Titre</th>
-          </tr>
-        </thead>
-        <tbody>
-          {books.data.map((book) => {
-            return (
-              <tr key={book.id}>
-                <td>{book.author}</td>
-                <td>{book.title}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      {books.isError && <div>Une erreur est survenue.</div>}
+      {books.isLoading && <div>Chargement en cours...</div>}
+      {!(books.isLoading || books.isError) && (
+        <table className="searchResults">
+          <thead>
+            <tr>
+              <th>Auteur</th>
+              <th>Titre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {books.data.map((book) => {
+              return (
+                <tr key={book.id}>
+                  <td>{book.author}</td>
+                  <td>{book.title}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      )}
     </>
   );
 };
