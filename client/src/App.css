@@ -1,0 +1,14 @@
+.title {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #309995;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1024px;
+}

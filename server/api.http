@@ -1,0 +1,31 @@
+GET http://localhost:4000/api/books
+Accept: application/json
+
+###
+GET http://localhost:4000/api/books?search=tours
+Accept: application/json
+
+###
+GET /api/books HTTP/1.1
+Host: localhost:4000
+Accept: application/json
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36
+Origin: http://localhost:3000
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: http://localhost:3000/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+If-None-Match: W/"c1-rKkpz9YEpB2G/dDHZLItAeRalBU"
+
+###
+POST /api/books HTTP/1.1
+Host: localhost:4000
+Accept: application/json
+Content-Type: application/json
+
+{
+  "author": "J.R.R. Tolkien",
+  "title": "Le Hobbit"
+}
