@@ -1,0 +1,104 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+.title {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #309995;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navigation {
+  background-color: #309995;
+  padding: 20px;
+}
+
+.navigation > div {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.navigation button {
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1px;
+}
+
+.navigation button:hover {
+  border-width: 2px;
+  margin: 0;
+}
+
+.navigation button.active {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  margin: 1px;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchForm input {
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #309995;
+}
+
+.searchForm button {
+  background-color: inherit;
+  border: 1px solid #309995;
+  padding: 5px;
+  color: #309995;
+  border-radius: 0.5em;
+}
+
+.searchForm button:hover {
+  background-color: #309995;
+  color: white;
+}
+
+.searchResults {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.searchResults th {
+  color: #309995;
+  font-weight: 600;
+  padding: 5px 10px 0 0;
+  border-bottom: 1px solid #309995;
+}
+
+.searchResults th:first-child {
+  width: 20%;
+}
+
+.searchResults td {
+  padding: 5px 10px 0 0;
+}
+
+.searchResults tr:nth-child(even) {
+  background-color: #30999522;
+}
