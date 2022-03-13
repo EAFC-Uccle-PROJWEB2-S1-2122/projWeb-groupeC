@@ -1,0 +1,179 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  font-size: 4rem;
+  font-weight: 100;
+  color: #27ae60;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navigation {
+  background-color: #27ae60;
+  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.navigation > div {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.navigation button {
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1px;
+}
+
+.navigation button:hover {
+  border-width: 2px;
+  margin: 0;
+}
+
+.navigation button.active {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: 600;
+  margin: 1px;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchForm input {
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #27ae60;
+}
+
+.searchForm button {
+  background-color: inherit;
+  border: 1px solid #27ae60;
+  padding: 5px;
+  color: #27ae60;
+  border-radius: 0.5em;
+}
+
+.searchForm button:hover {
+  background-color: #27ae60;
+  color: white;
+}
+
+.searchResults {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.searchResults th {
+  color: #27ae60;
+  font-weight: 600;
+  padding: 5px 10px 0 0;
+  border-bottom: 1px solid #27ae60;
+  text-align: center;
+}
+
+.searchResults th:first-child {
+  width: 20%;
+}
+
+.searchResults td {
+  padding: 5px 10px 0 0;
+  text-align: center;
+}
+
+.searchResults tr:nth-child(even) {
+  background-color: #30999522;
+}
+
+/*PARTIE DE FRANKLIN*/
+
+section {
+  padding: 2rem 9%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 2rem 9%;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .content {
+  flex: 1 1 41rem;
+}
+
+.content span {
+  font-size: 2rem;
+  color: green;
+}
+
+.content p {
+  font-size: 1.4rem;
+  color: green;
+  line-height: 2rem;
+  padding: 1rem 0;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+  gap: 1.5rem;
+}
+.category .box {
+  width: 12rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: #f7f7f7;
+}
+.category .box h3 {
+  font-size: 1.8rem;
+  color: #130f40;
+  margin: 10px;
+}
+
+.box:hover {
+  background-color: #27ae60;
+  cursor: pointer;
+}
+
+.category .box img {
+  height: 5rem;
+}
