@@ -1,0 +1,10 @@
+.deliveryArea {
+  height: 300px;
+  background-color: rgb(13, 215, 241);
+  color: white;
+  font-family: Arial;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -98,16 +98,16 @@ section {
   overflow: hidden;
 }
 
-.home .content {
+.home .accueil {
   flex: 1 1 41rem;
 }
 
-.content span {
+.accueil span {
   font-size: 2rem;
   color: green;
 }
 
-.content p {
+.accueil p {
   font-size: 1.4rem;
   color: green;
   line-height: 2rem;

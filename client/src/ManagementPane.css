@@ -1,0 +1,10 @@
+.managementArea {
+  height: 300px;
+  background-color: rgb(240, 215, 72);
+  color: white;
+  font-family: Arial;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

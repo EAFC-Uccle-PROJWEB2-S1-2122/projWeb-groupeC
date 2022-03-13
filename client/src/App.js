@@ -1,12 +1,23 @@
+import React from "react";
 import "./App.css";
+import DeliveryPane from "./DeliveryPane";
+import ManagementPane from "./ManagementPane";
 import Navigation from "./Navigation";
+import OrdersPane from "./OrdersPane";
+import TakeOrderPane from "./TakeOrderPane";
 
 function App() {
+  const [activePane, setActivePane] = React.useState("client");
+
+  const handleClick = (name) => {
+    setActivePane(name);
+  };
+
   return (
     <>
       {/* PARTIE DE FRANKLIN */}
       <section class="home" id="home">
-        <div class="content">
+        <div class="accueil">
           <span>Bienvenue</span>
           <h3>La saveur au bout des papilles.</h3>
           <p>
@@ -16,43 +27,21 @@ function App() {
         </div>
       </section>
 
-      <Navigation />
+      <Navigation activePane={activePane} onClick={handleClick} />
 
       <div className="content">
-        <form className="searchForm">
-          <input type="text" />
-          <button>Rechercher</button>
-        </form>
-        <table className="searchResults">
-          <thead>
-            <tr>
-              <th>N° Commande</th>
-              <th>Date</th>
-              <th>Heure</th>
-              <th>Nbr Repas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>13/03/2022</td>
-              <td>12:00</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>13/03/2022</td>
-              <td>12:00</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>13/03/2022</td>
-              <td>12:00</td>
-              <td>2</td>
-            </tr>
-          </tbody>
-        </table>
+        {(() => {
+          switch (activePane) {
+            case "gestionnaire":
+              return <ManagementPane />;
+            case "restaurateur":
+              return <OrdersPane />;
+            case "livreur":
+              return <DeliveryPane />;
+            default:
+              return <TakeOrderPane />;
+          }
+        })()}
       </div>
 
       {/* PARTIE DE FRANKLIN */}
