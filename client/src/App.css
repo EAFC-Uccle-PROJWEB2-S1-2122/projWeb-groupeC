@@ -141,3 +141,8 @@ section {
 .category .box img {
   height: 5rem;
 }
+/*PARTIE DE FRANKLIN*/
+
+.leaflet-container {
+  height: 400px;
+}
