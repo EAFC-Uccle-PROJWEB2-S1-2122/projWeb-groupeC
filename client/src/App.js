@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 import OrdersPane from "./OrdersPane";
 import TakeOrderPane from "./TakeOrderPane";
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const places = [
   {
@@ -44,6 +45,7 @@ function App() {
   return (
     <>
       {/* PARTIE DE FRANKLIN */}
+
       <section class="home" id="home">
         <div class="accueil">
           <span>Bienvenue</span>
@@ -55,7 +57,7 @@ function App() {
         </div>
       </section>
 
-      <main>
+      <main class="leaflet-container">
         <h1>Intégration d'une carte</h1>
         <MapContainer center={[places[0].lat, places[0].lon]} zoom={15}>
           <TileLayer
@@ -113,11 +115,6 @@ function App() {
           <img src={require("./image/cat-4.png")} alt="poulets" />
           <h3>Poulets</h3>
         </div>
-
-        {/* <div class="box">
-          <img src={require("./image/cat-5.png")} alt="salade" />
-          <h3>Salades</h3>
-        </div> */}
       </section>
 
       {/* PARTIE DE FRANKLIN */}
