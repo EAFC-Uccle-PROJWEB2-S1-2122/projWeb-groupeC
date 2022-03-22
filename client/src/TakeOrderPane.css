@@ -1,10 +1,192 @@
 .clientArea {
   height: 300px;
-  background-color: blueviolet;
-  color: white;
-  font-family: Arial;
-  font-size: large;
+  margin-bottom: 50px;
+}
+
+.ls_resto {
+  margin-top: 50px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 500px);
+  grid-template-rows: repeat(3, 100px);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.restaurantArea {
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.resto1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.resto2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.resto3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.resto4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.resto5 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.resto6 {
+  grid-area: 3 / 2 / 4 / 3;
+  border: 2px solid black;
+}
+
+@font-face {
+  src: url(./image/ElegantIcons.ttf);
+  font-family: ElegantIcons;
+}
+
+@font-face {
+  src: url(./image/Montserrat-Bold.ttf);
+  font-family: Montserrat-Bold;
+}
+
+@font-face {
+  src: url(./image/Montserrat-Italic.ttf);
+  font-family: Montserrat-Italic;
+}
+
+@font-face {
+  src: url(./image/Montserrat-Regular.ttf);
+  font-family: Montserrat-Regular;
+}
+
+.resto {
+  background-color: white;
+  width: 500px;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  transition: 1s;
+}
+
+.resto:hover {
+  transform: scale(1.3);
+  z-index: 1;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.left-side {
+  background-color: grey;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side img:first-child {
+  height: 100px;
+}
+
+.right-side {
+  width: 30px;
+  flex-grow: 1;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 1.5%;
+}
+
+.l1 {
+  display: flex;
+}
+
+.kind-rest {
+  width: 20px;
+  height: 20px;
+  flex-grow: 1;
+}
+
+.score-rest {
+  width: 40px;
+  height: 20px;
+}
+
+em {
+  font-family: Montserrat-Italic;
+  color: black;
+}
+
+strong {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: black;
+  font-family: Montserrat-Regular;
+}
+
+.score-rest strong:before {
+  font-family: "ElegantIcons";
+  content: "\e033";
+  margin: -4px 3px 0 0;
+  color: #27ae60;
+}
+
+h3 {
+  margin-left: 5px;
+  color: black;
+  font-family: Montserrat-Bold;
+  display: inline;
+  transition: all 0.5s linear;
+}
+
+h3:hover {
+  color: #27ae60;
+}
+
+.ribbon.off {
+  background-color: #f3723b;
+  padding-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.ribbon {
+  color: #fff;
+  display: inline-block;
+  top: 15px;
+  right: 15px;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 6px 8px 4px 23px;
+  line-height: 1;
+  font-size: 0.75rem;
+  z-index: 9;
+}
+.fire {
+  display: inline;
+  width: 15px;
+  margin-right: 5px;
+}
+
+small {
+  font-family: Montserrat-Regular;
+  position: relative;
+  bottom: 2px;
+}
+
+.adress {
+  font-size: 10px;
+  color: #777;
+  font-family: Montserrat-Regular;
 }

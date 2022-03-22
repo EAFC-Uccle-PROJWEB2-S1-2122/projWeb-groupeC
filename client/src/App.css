@@ -72,7 +72,7 @@ body {
 
 /*PARTIE DE FRANKLIN*/
 
-section {
+.section {
   padding: 2rem 9%;
 }
 
@@ -81,7 +81,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 2;
   background: white;
   align-items: center;
   justify-content: space-between;
@@ -96,6 +96,9 @@ section {
   gap: 2rem;
   position: relative;
   overflow: hidden;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 130px;
 }
 
 .home .accueil {
@@ -119,6 +122,7 @@ section {
   justify-content: center;
   padding-bottom: 5rem;
   gap: 1.5rem;
+  padding-bottom: 15px;
 }
 .category .box {
   width: 12rem;
@@ -142,7 +146,3 @@ section {
   height: 5rem;
 }
 /*PARTIE DE FRANKLIN*/
-
-.leaflet-container {
-  height: 400px;
-}
