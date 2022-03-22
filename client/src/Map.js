@@ -4,28 +4,46 @@ import "leaflet/dist/leaflet.css";
 
 const places = [
   {
-    name: "EAFC-Uccle",
-    address: "95 rue gatti de gamond 1180 uccle",
-    lat: "50.80348845",
-    lon: "4.326774196829069",
+    name: "Casablanca",
+    adresse:
+      "197, Rue de Flandre, Quartier des Quais, Pentagone, Bruxelles, Ville de Bruxelles, Bruxelles-Capitale, 1000, Belgique",
+    lat: "50.85321",
+    lon: "4.34199",
   },
   {
-    name: "Le Parvis",
-    address: "71 rue xavier de bue 1180 uccle",
-    lat: "50.803256700000006",
-    lon: "4.338678333706607",
+    name: "Los Tacos",
+    adresse:
+      "Bâtiment 8, Rue d'Anderlecht, Quartier Midi-Lemonnier, Pentagone, Bruxelles, Ville de Bruxelles, Bruxelles-Capitale, 1000, Belgique",
+    lat: "50.84525",
+    lon: "4.34565",
   },
   {
-    name: "Maki Maki",
-    address: "644 chaussee d'alsemberg 1180 uccle",
-    lat: "50.80413675",
-    lon: "4.336891294863636",
+    name: "Oishii Sushi",
+    adresse:
+      "Bâtiment 39, Rue Haute, Marolles, Quartier du Sablon, Pentagone, Bruxelles, Ville de Bruxelles, Bruxelles-Capitale, 1000, Belgique",
+    lat: "50.84073",
+    lon: "4.35135",
   },
   {
-    name: "O'Tacos",
-    address: "56 rue xavier de bue 1180 uccle",
-    lat: "50.8035436",
-    lon: "4.33811100431808",
+    name: "Manhattan Burger",
+    adresse:
+      "Bâtiment 11, Rue des Hirondelles, Quartier Marais-Jacqmain, Pentagone, Bruxelles, Ville de Bruxelles, Bruxelles-Capitale, 1000, Belgique",
+    lat: "50.85233",
+    lon: "4.35231",
+  },
+  {
+    name: "Namaste Bombay",
+    adresse:
+      "Bâtiment 22, Boulevard du Jubilé, Molenbeek-Saint-Jean, Bruxelles-Capitale, 1080, Belgique",
+    lat: "50.86197",
+    lon: "4.33781",
+  },
+  {
+    name: "La Monnalisa",
+    adresse:
+      "Maison 12, Rue Royale, Quartier Royal, Pentagone, Bruxelles, Ville de Bruxelles, Bruxelles-Capitale, 1000, Belgique",
+    lat: "50.84346",
+    lon: "4.36035",
   },
 ];
 
@@ -33,7 +51,7 @@ const Map = () => {
   return (
     <>
       <main class="leaflet-container">
-        <MapContainer center={[places[0].lat, places[0].lon]} zoom={15}>
+        <MapContainer center={[50.8458, 4.3518]} zoom={13}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

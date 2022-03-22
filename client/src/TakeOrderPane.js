@@ -16,62 +16,62 @@ const TakeOrderPane = () => {
               nameRest={"La Monnalisa"}
               adressRest={"12 Rue Royale"}
               discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              mainDishRest={"Pâtes à la sauce bolognaise"}
             />
 
             <RestaurantElement
               class="resto2"
               imgRest={"imgRest2"}
-              kindRest={"Italian"}
-              scoreRest={"9.5"}
-              nameRest={"La Monnalisa"}
-              adressRest={"12 Rue Royale"}
-              discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              kindRest={"Japanese"}
+              scoreRest={"9.6"}
+              nameRest={"Oishii Sushi"}
+              adressRest={"15 Rue Haute"}
+              discountRest={"-35%"}
+              mainDishRest={"California Roll"}
             />
 
             <RestaurantElement
               class="resto3"
               imgRest={"imgRest3"}
-              kindRest={"Italian"}
-              scoreRest={"9.5"}
-              nameRest={"La Monnalisa"}
-              adressRest={"12 Rue Royale"}
-              discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              kindRest={"Indian"}
+              scoreRest={"9.4"}
+              nameRest={"Namaste Bombay"}
+              adressRest={"22 Bouvelevard Jubilé"}
+              discountRest={"-25%"}
+              mainDishRest={"Poulet Tandori"}
             />
 
             <RestaurantElement
               class="resto4"
               imgRest={"imgRest4"}
-              kindRest={"Italian"}
-              scoreRest={"9.5"}
-              nameRest={"La Monnalisa"}
-              adressRest={"12 Rue Royale"}
+              kindRest={"Mexican"}
+              scoreRest={"9.3"}
+              nameRest={"Los Tacos"}
+              adressRest={"8 Rue d'Anderlecht"}
               discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              mainDishRest={"Tacos au Guacamole"}
             />
 
             <RestaurantElement
               class="resto5"
               imgRest={"imgRest5"}
-              kindRest={"Italian"}
+              kindRest={"American"}
               scoreRest={"9.5"}
-              nameRest={"La Monnalisa"}
-              adressRest={"12 Rue Royale"}
-              discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              nameRest={"Manhattan Burger"}
+              adressRest={"11 des Hirondelles"}
+              discountRest={"-20%"}
+              mainDishRest={"Hamburger de boeuf"}
             />
 
             <RestaurantElement
               class="resto6"
               imgRest={"imgRest6"}
-              kindRest={"Italian"}
+              kindRest={"Moroccan"}
               scoreRest={"9.5"}
-              nameRest={"La Monnalisa"}
-              adressRest={"12 Rue Royale"}
+              nameRest={"Casablanca"}
+              adressRest={"197 Chaussée de Gand"}
               discountRest={"-30%"}
-              mainDishRest={"Lasagnes à la bolognaise"}
+              mainDishRest={"Tajine au poulet"}
             />
           </div>
         </div>
@@ -126,9 +126,7 @@ const RestaurantElement = ({
                   );
               }
             })()}
-            {/* <img src={require({ imgRest })} alt="resto" /> */}
           </div>
-          {/* ./image/restaurant.png */}
           <div className="right-side">
             <ul>
               <li className="l1">

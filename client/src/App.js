@@ -50,8 +50,6 @@ function App() {
         </div>
       </div>
 
-      {/* PARTIE DE FRANKLIN */}
-
       <Navigation activePane={activePane} onClick={handleClick} />
 
       <div className="content">
