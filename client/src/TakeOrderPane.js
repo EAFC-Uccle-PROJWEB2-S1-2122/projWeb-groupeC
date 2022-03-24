@@ -87,6 +87,8 @@ const TakeOrderPane = () => {
             />
           </div>
         </div>
+
+        <div id="form"></div>
       </div>
     </>
   );
@@ -101,13 +103,13 @@ const RestaurantElement = ({
   discountRest,
   mainDishRest,
 }) => {
+  const displayForm = () => {
+    console.log("okokok");
+    const client_area = document.getElementsByClassName("clientArea");
+    console.log(client_area);
+  };
   return (
     <>
-      {/* <a
-        href="https://www.google.fr/?gws_rd=ssl"
-        target="_blank"
-        rel="noreferrer"
-      > */}
       <div className="resto">
         <div className="left-side">
           {(() => {
@@ -140,7 +142,12 @@ const RestaurantElement = ({
             <li>
               <h3>{nameRest}</h3>
             </li>
-            <li className="adress">{adressRest}</li>
+            <li className="adress">
+              {adressRest}
+              <span class="span-button">
+                <button onClick={() => displayForm()}>Commander</button>
+              </span>
+            </li>
             <li>
               <span className="ribbon off">
                 <img
@@ -155,7 +162,17 @@ const RestaurantElement = ({
           </ul>
         </div>
       </div>
-      {/* </a> */}
+    </>
+  );
+};
+
+const FormPane = () => {
+  return (
+    <>
+      <div id="form"></div>
+      <form action="" method="post">
+        <label></label>
+      </form>
     </>
   );
 };
