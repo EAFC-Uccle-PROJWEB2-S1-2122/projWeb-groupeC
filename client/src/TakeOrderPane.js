@@ -4,6 +4,18 @@ import Map from "./Map";
 const TakeOrderPane = () => {
   return (
     <>
+      {/* <div className="restaurant-preview">
+        <div className="preview" data-target="Pâtes à la sauce bolognaise">
+          <img src={require("./image/rest1.png")} alt="resto1" />
+          <h3>La Monnalisa</h3>
+        </div>
+
+        <div className="preview" data-target="California Roll">
+          <img src={require("./image/rest2.png")} alt="resto2" />
+          <h3>Oishii Sushi</h3>
+        </div>
+      </div> */}
+
       <div className="clientArea">
         <Map />
         <div className="restaurantArea">
@@ -91,71 +103,59 @@ const RestaurantElement = ({
 }) => {
   return (
     <>
-      <a
+      {/* <a
         href="https://www.google.fr/?gws_rd=ssl"
         target="_blank"
         rel="noreferrer"
-      >
-        <div className="resto">
-          <div className="left-side">
-            {(() => {
-              switch (imgRest) {
-                case "imgRest1":
-                  return (
-                    <img src={require("./image/rest1.png")} alt="resto1" />
-                  );
-                case "imgRest2":
-                  return (
-                    <img src={require("./image/rest2.png")} alt="resto2" />
-                  );
-                case "imgRest3":
-                  return (
-                    <img src={require("./image/rest3.png")} alt="resto3" />
-                  );
-                case "imgRest4":
-                  return (
-                    <img src={require("./image/rest4.png")} alt="resto4" />
-                  );
-                case "imgRest5":
-                  return (
-                    <img src={require("./image/rest5.png")} alt="resto5" />
-                  );
-                default:
-                  return (
-                    <img src={require("./image/rest6.png")} alt="resto6" />
-                  );
-              }
-            })()}
-          </div>
-          <div className="right-side">
-            <ul>
-              <li className="l1">
-                <div className="kind-rest">
-                  <em>{kindRest}</em>
-                </div>
-                <div className="score-rest">
-                  <strong>{scoreRest}</strong>
-                </div>
-              </li>
-              <li>
-                <h3>{nameRest}</h3>
-              </li>
-              <li className="adress">{adressRest}</li>
-              <li>
-                <span className="ribbon off">
-                  <img
-                    className="fire"
-                    src={require("./image/fire.svg").default}
-                    alt="fire_icon"
-                  />
-                  <small>{discountRest}</small>
-                </span>
-                <h3>{mainDishRest}</h3>
-              </li>
-            </ul>
-          </div>
+      > */}
+      <div className="resto">
+        <div className="left-side">
+          {(() => {
+            switch (imgRest) {
+              case "imgRest1":
+                return <img src={require("./image/rest1.png")} alt="resto1" />;
+              case "imgRest2":
+                return <img src={require("./image/rest2.png")} alt="resto2" />;
+              case "imgRest3":
+                return <img src={require("./image/rest3.png")} alt="resto3" />;
+              case "imgRest4":
+                return <img src={require("./image/rest4.png")} alt="resto4" />;
+              case "imgRest5":
+                return <img src={require("./image/rest5.png")} alt="resto5" />;
+              default:
+                return <img src={require("./image/rest6.png")} alt="resto6" />;
+            }
+          })()}
         </div>
-      </a>
+        <div className="right-side">
+          <ul>
+            <li className="l1">
+              <div className="kind-rest">
+                <em>{kindRest}</em>
+              </div>
+              <div className="score-rest">
+                <strong>{scoreRest}</strong>
+              </div>
+            </li>
+            <li>
+              <h3>{nameRest}</h3>
+            </li>
+            <li className="adress">{adressRest}</li>
+            <li>
+              <span className="ribbon off">
+                <img
+                  className="fire"
+                  src={require("./image/fire.svg").default}
+                  alt="fire_icon"
+                />
+                <small>{discountRest}</small>
+              </span>
+              <h3>{mainDishRest}</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* </a> */}
     </>
   );
 };
