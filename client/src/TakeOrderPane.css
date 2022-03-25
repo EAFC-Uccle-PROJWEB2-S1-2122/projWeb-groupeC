@@ -1,6 +1,7 @@
 .clientArea {
   height: 300px;
   margin-bottom: 50px;
+  display: visible;
 }
 
 .ls_resto {
@@ -193,10 +194,11 @@ small {
   font-family: Montserrat-Regular;
 }
 
-#form {
+.form {
   width: 1000px;
   height: 200px;
-  background-color: #fff;
+  background-color: red;
+  /* display: none; */
 }
 
 button {
@@ -208,6 +210,9 @@ button {
   border: 2px solid #fff;
   border-radius: 10px;
 }
+
+/* .btn-retour {
+} */
 
 /* .div-button {
   width: 120px;

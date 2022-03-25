@@ -1,6 +1,17 @@
 import "./Map.css";
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+import icon from "leaflet/dist/images/marker-icon.png";
+import iconShadow from "leaflet/dist/images/marker-shadow.png";
+
+let DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const places = [
   {
@@ -50,7 +61,7 @@ const places = [
 const Map = () => {
   return (
     <>
-      <main class="leaflet-container">
+      <div className="leaflet-container">
         <MapContainer center={[50.8458, 4.3518]} zoom={13}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -66,7 +77,7 @@ const Map = () => {
             </Marker>
           ))}
         </MapContainer>
-      </main>
+      </div>
     </>
   );
 };

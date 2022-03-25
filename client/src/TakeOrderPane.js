@@ -4,18 +4,6 @@ import Map from "./Map";
 const TakeOrderPane = () => {
   return (
     <>
-      {/* <div className="restaurant-preview">
-        <div className="preview" data-target="Pâtes à la sauce bolognaise">
-          <img src={require("./image/rest1.png")} alt="resto1" />
-          <h3>La Monnalisa</h3>
-        </div>
-
-        <div className="preview" data-target="California Roll">
-          <img src={require("./image/rest2.png")} alt="resto2" />
-          <h3>Oishii Sushi</h3>
-        </div>
-      </div> */}
-
       <div className="clientArea">
         <Map />
         <div className="restaurantArea">
@@ -87,9 +75,10 @@ const TakeOrderPane = () => {
             />
           </div>
         </div>
-
-        <div id="form"></div>
       </div>
+
+      <div></div>
+      <div class="form"></div>
     </>
   );
 };
@@ -104,9 +93,13 @@ const RestaurantElement = ({
   mainDishRest,
 }) => {
   const displayForm = () => {
-    console.log("okokok");
-    const client_area = document.getElementsByClassName("clientArea");
-    console.log(client_area);
+    // console.log("okokok");
+    // const client_area = document.querySelector(".clientArea");
+    // const form = document.querySelector(".form");
+    // console.log(client_area);
+    // console.log(form);
+    // client_area.style.display = "none";
+    // form.style.display = "visible";
   };
   return (
     <>
@@ -167,12 +160,22 @@ const RestaurantElement = ({
 };
 
 const FormPane = () => {
+  const displayMapAndList = () => {
+    console.log("okok");
+    //   let client_area = document.querySelector(".clientArea");
+    //   let form = document.querySelector(".form");
+    //   client_area.style.display = "visible";
+    //   form.style.display = "none";
+  };
+
   return (
     <>
-      <div id="form"></div>
-      <form action="" method="post">
-        <label></label>
-      </form>
+      <div>
+        <button
+          className="btn-retour"
+          onClick={() => displayMapAndList()}
+        ></button>
+      </div>
     </>
   );
 };
