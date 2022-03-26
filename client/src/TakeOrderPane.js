@@ -78,7 +78,7 @@ const TakeOrderPane = () => {
       </div>
 
       <div></div>
-      <div class="form"></div>
+      <div class="form">{/* <FormPane /> */}</div>
     </>
   );
 };
@@ -93,13 +93,13 @@ const RestaurantElement = ({
   mainDishRest,
 }) => {
   const displayForm = () => {
-    // console.log("okokok");
-    // const client_area = document.querySelector(".clientArea");
-    // const form = document.querySelector(".form");
+    console.log("okokok");
+    const client_area = document.querySelector(".clientArea");
+    const form = document.querySelector(".form");
     // console.log(client_area);
     // console.log(form);
-    // client_area.style.display = "none";
-    // form.style.display = "visible";
+    client_area.style.display = "none";
+    // form.style.opacity = "1";
   };
   return (
     <>
@@ -162,20 +162,21 @@ const RestaurantElement = ({
 const FormPane = () => {
   const displayMapAndList = () => {
     console.log("okok");
-    //   let client_area = document.querySelector(".clientArea");
-    //   let form = document.querySelector(".form");
-    //   client_area.style.display = "visible";
+    // const client_area = document.querySelector(".clientArea");
+    // console.log(client_area);
+    //   const form = document.querySelector(".form");
+    // client_area.style.display = "none";
     //   form.style.display = "none";
   };
 
   return (
     <>
-      <div>
+      {/* <div class="content-form">
         <button
           className="btn-retour"
           onClick={() => displayMapAndList()}
         ></button>
-      </div>
+      </div> */}
     </>
   );
 };
