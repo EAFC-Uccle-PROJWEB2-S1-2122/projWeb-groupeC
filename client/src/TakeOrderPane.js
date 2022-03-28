@@ -78,7 +78,9 @@ const TakeOrderPane = () => {
       </div>
 
       <div></div>
-      <div class="form">{/* <FormPane /> */}</div>
+      <div class="form">
+        <FormPane />
+      </div>
     </>
   );
 };
@@ -98,8 +100,9 @@ const RestaurantElement = ({
     const form = document.querySelector(".form");
     // console.log(client_area);
     // console.log(form);
-    client_area.style.display = "none";
-    // form.style.opacity = "1";
+    client_area.style.right = "300vh";
+    form.style.left = "0px";
+    form.style.top = "-350px";
   };
   return (
     <>
@@ -162,21 +165,120 @@ const RestaurantElement = ({
 const FormPane = () => {
   const displayMapAndList = () => {
     console.log("okok");
-    // const client_area = document.querySelector(".clientArea");
-    // console.log(client_area);
-    //   const form = document.querySelector(".form");
-    // client_area.style.display = "none";
-    //   form.style.display = "none";
+    const client_area = document.querySelector(".clientArea");
+    const form = document.querySelector(".form");
+    form.style.left = "300vh";
+    form.style.top = "0px";
+    client_area.style.right = "0";
   };
 
   return (
     <>
-      {/* <div class="content-form">
-        <button
-          className="btn-retour"
-          onClick={() => displayMapAndList()}
-        ></button>
-      </div> */}
+      <div class="content-form">
+        <form action="/submitForm" method="post">
+          <h3>Formulaire de Commande</h3>
+
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <label htmlFor="customerNameInput"> Nom : </label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="customerName"
+                    id="customerNameInput"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="customerNbDishesInput">
+                    {" "}
+                    Nombre de repas{" "}
+                  </label>
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="customerNbDishes"
+                    id="customerNbDishesInput"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <label htmlFor="customerStreerInput">Rue : </label>
+                </td>
+                <td>
+                  {" "}
+                  <input
+                    type="text"
+                    name="customerStreet"
+                    id="customerStreetInput"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="customerNumHouseInput">
+                    {" "}
+                    Numéro de maison :{" "}
+                  </label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="customerNumHouse"
+                    id="customerNumHouseInput"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="customerNumBoxInput">
+                    {" "}
+                    Numéro de boite :{" "}
+                  </label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="customerNumBox"
+                    id="customerNumBoxInput"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="customerCPInput"> Code Postal : </label>
+                </td>
+                <td>
+                  <input type="number" name="customerCP" id="customerCPInput" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label htmlFor="customerMunicipalityInput"> Commune : </label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="customerMunicipality"
+                    id="customerMunicipalityInput"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button>Valider ma commande</button>
+        </form>
+        <button className="btn-retour" onClick={() => displayMapAndList()}>
+          Retourner au voir le menu
+        </button>
+      </div>
     </>
   );
 };

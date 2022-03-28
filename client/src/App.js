@@ -17,8 +17,8 @@ function App() {
     <>
       {/* PARTIE DE FRANKLIN */}
 
-      <section class="home" id="home">
-        <div class="accueil">
+      <section className="home" id="home">
+        <div className="accueil">
           <span>Bienvenue</span>
           <h2>La saveur au bout des papilles.</h2>
           <p>
@@ -28,23 +28,23 @@ function App() {
         </div>
       </section>
 
-      <div class="category">
-        <div class="box">
+      <div className="category">
+        <div className="box">
           <img src={require("./image/cat-1.png")} alt="menu" />
           <h3>Menu</h3>
         </div>
 
-        <div class="box">
+        <div className="box">
           <img src={require("./image/cat-2.png")} alt="pizza" />
           <h3>Pizza</h3>
         </div>
 
-        <div class="box">
+        <div className="box">
           <img src={require("./image/cat-3.png")} alt="burger" />
           <h3>Burger</h3>
         </div>
 
-        <div class="box">
+        <div className="box">
           <img src={require("./image/cat-4.png")} alt="poulets" />
           <h3>Poulets</h3>
         </div>

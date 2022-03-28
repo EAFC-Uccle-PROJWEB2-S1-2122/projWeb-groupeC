@@ -1,10 +1,33 @@
+let orderId = 0;
+
+const orders = [
+  {
+    num_order: orderId++,
+    date_order: "13/03/2022",
+    hour_order: "12:00",
+    quantity: 2,
+  },
+  {
+    num_order: orderId++,
+    date_order: "13/03/2022",
+    hour_order: "12:00",
+    quantity: 2,
+  },
+  {
+    num_order: orderId++,
+    date_order: "13/03/2022",
+    hour_order: "12:00",
+    quantity: 2,
+  },
+];
+
 const OrdersPane = () => {
   return (
     <>
-      <form className="searchForm">
+      {/* <form className="searchForm">
         <input type="text" />
         <button>Rechercher</button>
-      </form>
+      </form> */}
       <table className="searchResults">
         <thead>
           <tr>
@@ -15,24 +38,16 @@ const OrdersPane = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>13/03/2022</td>
-            <td>12:00</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>13/03/2022</td>
-            <td>12:00</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>13/03/2022</td>
-            <td>12:00</td>
-            <td>2</td>
-          </tr>
+          {orders.map((order) => {
+            return (
+              <tr key={order.num_order}>
+                <td>{order.num_order}</td>
+                <td>{order.date_order}</td>
+                <td>{order.hour_order}</td>
+                <td>{order.quantity}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </>
